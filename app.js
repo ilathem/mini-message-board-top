@@ -4,6 +4,7 @@ const app = express();
 
 // import routes
 const indexRouter = require('./route/indexRouter');
+const newMessageRouter = require('./route/newMessageRouter');
 
 // setup ejs
 const path = require('node:path');
@@ -12,6 +13,7 @@ app.set('view engine', 'ejs');
 
 // configure routes
 app.use('/', indexRouter);
+app.use('/new', newMessageRouter);
 
 // initialize app
 app.listen(3000, () => {
