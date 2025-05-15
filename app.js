@@ -19,6 +19,6 @@ app.use('/', indexRouter);
 app.use('/new', newMessageRouter);
 
 // initialize app
-app.listen(3000, () => {
-  console.log('Listening on port 3000');
+app.listen(8000, () => {
+  console.log('Listening on port 8000');
 });
