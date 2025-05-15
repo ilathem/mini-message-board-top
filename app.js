@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 
+// needed to parse the form data into the request
+app.use(express.urlencoded({ extended: true }));
+
 // import routes
 const indexRouter = require('./route/indexRouter');
 const newMessageRouter = require('./route/newMessageRouter');
